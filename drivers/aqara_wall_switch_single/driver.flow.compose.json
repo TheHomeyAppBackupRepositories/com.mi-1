@@ -1,0 +1,11 @@
+{
+  "triggers": [
+    {
+      "id": "{{driverId}}:press_1x",
+      "title": {
+        "en": "Button pressed",
+        "nl": "Knop ingedrukt"
+      }
+    }
+  ]
+}

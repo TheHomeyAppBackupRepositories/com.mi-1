@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960px" height="960px" viewBox="0 0 960 960" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Community/Capabilities/moisture</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Community/Capabilities/moisture" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M552.56495,198.588764 C560.930504,209.50291 592.677896,247.631135 598.186177,255.273412 C600.753638,258.834206 604.626687,264.654176 609.480391,272.160147 C612.65629,277.07149 615.608456,281.703752 618.547909,286.35165 C633.093337,309.450268 640,337.086198 640,368.265327 C640,453.169262 571.290725,522 486.507874,522 C401.733135,522 333,453.161611 333,368.265327 C333,337.821356 339.483727,309.926766 352.938425,287.562192 C356.612691,281.488986 370.096699,261.626223 376.070761,253.549036 C381.192334,246.619974 411.749261,209.918688 420.442786,198.577113 C453.576365,155.351034 471.238241,118.376758 471.238241,82.273852 C471.238241,61.908716 501.777508,61.908716 501.777508,82.273852 C501.777508,118.391482 519.436503,155.367632 552.56495,198.588764 Z" id="Combined-Shape-path" fill="#000000"></path>
+        <g id="Group" transform="translate(99.000000, 760.000000)" fill="#000000">
+            <circle id="Oval" cx="29.5" cy="29.5" r="29.5"></circle>
+            <circle id="Oval" cx="208.5" cy="29.5" r="29.5"></circle>
+            <circle id="Oval" cx="389.5" cy="29.5" r="29.5"></circle>
+            <circle id="Oval" cx="567.5" cy="29.5" r="29.5"></circle>
+            <circle id="Oval" cx="746.5" cy="29.5" r="29.5"></circle>
+        </g>
+        <g id="Group-2" transform="translate(190.000000, 844.000000)" fill="#000000">
+            <circle id="Oval" cx="569" cy="25" r="25"></circle>
+            <circle id="Oval" cx="388" cy="25" r="25"></circle>
+            <circle id="Oval" cx="206" cy="25" r="25"></circle>
+            <circle id="Oval" cx="25" cy="25" r="25"></circle>
+        </g>
+        <path d="M36,469.5 L283,469.5 M689,469.5 L937,469.5" id="Shape" stroke="#000000" stroke-width="40" stroke-linecap="round"></path>
+        <line x1="110" y1="580.5" x2="864" y2="580.5" id="Path-6" stroke="#000000" stroke-width="30" stroke-linecap="round"></line>
+        <line x1="110" y1="580.5" x2="864" y2="580.5" id="Path-6" stroke="#000000" stroke-width="30" stroke-linecap="round"></line>
+        <line x1="193" y1="684" x2="780" y2="684" id="Path-6" stroke="#000000" stroke-width="30" stroke-linecap="round"></line>
+    </g>
+</svg>

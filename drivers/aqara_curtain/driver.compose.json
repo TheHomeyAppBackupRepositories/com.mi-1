@@ -1,0 +1,42 @@
+{
+  "name": {
+    "en": "Aqara Curtain Controller",
+    "nl": "Aqara Gordijn Controller"
+  },
+  "class": "curtain",
+  "capabilities": [
+    "windowcoverings_set"
+  ],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "zigbee": {
+    "manufacturerName": "LUMI",
+    "productId": [
+      "lumi.curtain"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          13,
+          258
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "/drivers/{{driverId}}/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the button for 5 seconds until the light flashes.",
+        "nl": "Druk 5 seconden op de knop totdat het lampje knippert."
+      }
+    }
+  },
+  "images": {
+    "large": "/drivers/{{driverId}}/assets/images/large.jpg",
+    "small": "/drivers/{{driverId}}/assets/images/small.jpg"
+  }
+}

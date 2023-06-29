@@ -1,0 +1,25 @@
+{
+  "triggers": [
+    {
+      "id": "{{driverId}}:left_press_1x",
+      "title": {
+        "en": "Left button pressed",
+        "nl": "Linker knop ingedrukt"
+      }
+    },
+    {
+      "id": "{{driverId}}:right_press_1x",
+      "title": {
+        "en": "Right button pressed",
+        "nl": "Rechter knop ingedrukt"
+      }
+    },
+    {
+      "id": "{{driverId}}:both_press_1x",
+      "title": {
+        "en": "Both buttons pressed",
+        "nl": "Beide knoppen ingedrukt"
+      }
+    }
+  ]
+}

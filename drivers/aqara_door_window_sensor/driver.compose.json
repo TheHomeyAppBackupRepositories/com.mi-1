@@ -1,0 +1,47 @@
+{
+  "id": "aqara_door_window_sensor",
+  "name": {
+    "en": "Aqara Door & Window Sensor",
+    "nl": "Aqara Deur & Raam Sensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_contact",
+    "alarm_battery"
+  ],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "zigbee": {
+    "manufacturerName": "LUMI",
+    "productId": "lumi.sensor_magnet.aq2",
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          6
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "/drivers/{{driverId}}/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on the side of the {{driverNameEn}} until the light flashes.",
+        "nl": "Druk op de knop aan de zijkant van de {{driverNameNl}} totdat het lampje knippert."
+      }
+    }
+  },
+  "energy": {
+    "batteries": [
+      "CR1632"
+    ]
+  },
+  "images": {
+    "large": "/drivers/{{driverId}}/assets/images/large.png",
+    "small": "/drivers/{{driverId}}/assets/images/small.png"
+  }
+}

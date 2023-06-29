@@ -1,0 +1,1 @@
+Xiaomi offers a wide range of smart Zigbee products that can be used with Homey. It has a simple and elegant design, it’s easy to use and can be customized in a variety of ways to support your lifestyle needs.

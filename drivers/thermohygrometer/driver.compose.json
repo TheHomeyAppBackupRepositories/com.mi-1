@@ -1,0 +1,41 @@
+{
+  "id": "thermohygrometer",
+  "name": {
+    "en": "Mi Thermometer/Hygrometer"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_humidity",
+    "measure_temperature",
+    "measure_battery"
+  ],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "connectivity": [
+    "ble"
+  ],
+  "energy": {
+    "batteries": [
+      "CR2032"
+    ]
+  },
+  "images": {
+    "large": "/drivers/thermohygrometer/assets/images/large.png",
+    "small": "/drivers/thermohygrometer/assets/images/small.png"
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

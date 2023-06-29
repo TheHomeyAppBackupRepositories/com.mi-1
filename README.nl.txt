@@ -1,0 +1,1 @@
+Xiaomi heeft een groot assortiment smart home producten, gebaseerd op het Zigbee protocol. De producten hebben een simpel en elegant ontwerp, en zijn eenvoudig te gebruiken op een manier die bij jouw leefstijl past.

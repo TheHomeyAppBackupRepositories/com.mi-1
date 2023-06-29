@@ -1,0 +1,56 @@
+{
+  "name": {
+    "en": "Aqara Wall Switch (Double)",
+    "nl": "Aqara Wandschakelaar (Dubbel)"
+  },
+  "class": "remote",
+  "capabilities": [
+    "alarm_battery"
+  ],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "zigbee": {
+    "manufacturerName": "LUMI",
+    "productId": [
+      "lumi.sensor_86sw2"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          6
+        ]
+      },
+      "2": {
+        "clusters": [
+          6
+        ]
+      },
+      "3": {
+        "clusters": [
+          6
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Press both buttons until the light flashes.",
+        "nl": "Druk op beide knoppen totdat het lampje knippert."
+      }
+    }
+  },
+  "energy": {
+    "batteries": [
+      "CR2450"
+    ]
+  },
+  "images": {
+    "large": "/drivers/{{driverId}}/assets/images/large.jpg",
+    "small": "/drivers/{{driverId}}/assets/images/small.jpg"
+  }
+}

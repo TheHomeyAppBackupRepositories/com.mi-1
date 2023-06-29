@@ -1,0 +1,47 @@
+{
+  "name": {
+    "en": "Aqara Wall Switch (Single)",
+    "nl": "Aqara Wandschakelaar (Enkel)"
+  },
+  "class": "remote",
+  "capabilities": [
+    "alarm_battery"
+  ],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "zigbee": {
+    "manufacturerName": "LUMI",
+    "productId": [
+      "lumi.sensor_86sw1"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          6
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "/drivers/{{driverId}}/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the button until the light flashes.",
+        "nl": "Houd de schakelaar ingedrukt totdat het lampje knippert."
+      }
+    }
+  },
+  "energy": {
+    "batteries": [
+      "CR2032"
+    ]
+  },
+  "images": {
+    "large": "/drivers/{{driverId}}/assets/images/large.png",
+    "small": "/drivers/{{driverId}}/assets/images/small.png"
+  }
+}

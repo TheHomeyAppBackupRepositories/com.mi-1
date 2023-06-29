@@ -1,0 +1,51 @@
+{
+  "name": {
+    "en": "Aqara Temperature & Humidity Sensor",
+    "nl": "Aqara Temperatuur & Vochtsensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_temperature",
+    "measure_pressure",
+    "measure_humidity",
+    "alarm_battery"
+  ],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "zigbee": {
+    "manufacturerName": "LUMI",
+    "productId": "lumi.weather",
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          1026,
+          1027,
+          1029
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "/drivers/{{driverId}}/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on the side of the {{driverNameEn}} until the light flashes.",
+        "nl": "Druk op de knop aan de zijkant van de {{driverNameNl}} totdat het lampje knippert."
+      }
+    }
+  },
+  "energy": {
+    "batteries": [
+      "CR2032"
+    ]
+  },
+  "images": {
+    "large": "/drivers/{{driverId}}/assets/images/large.png",
+    "small": "/drivers/{{driverId}}/assets/images/small.png"
+  },
+  "settings": []
+}
