@@ -1,1 +1,610 @@
-{"_comment":"This file is generated. Please edit .homeycompose/app.json instead.","id":"com.mi","version":"0.7.0","compatibility":">=5.0.0","brandColor":"#FF6700","platforms":["local","cloud"],"sdk":3,"name":{"en":"Xiaomi","nl":"Xiaomi"},"description":{"en":"A Different Kind of Smart Home Solution","nl":"Een ander soort Smart Home oplossing"},"category":["lights"],"permissions":["homey:wireless:ble","homey:wireless:zigbee"],"images":{"large":"/assets/images/large.png","small":"/assets/images/small.png"},"author":{"name":"Athom B.V."},"support":"https://homey.app/support","flow":{"triggers":[{"title":{"en":"The fertility value has changed","nl":"De vruchtbaarheid waarde is veranderd"},"args":[{"name":"device","type":"device","filter":"driver_id=flora|ropot"}],"tokens":[{"name":"flora_measure_fertility","title":{"en":"Fertility","nl":"Vruchtbaarheid"},"type":"number","example":2.34}],"id":"flora_measure_fertility_changed"},{"title":{"en":"The moisture value has changed","nl":"De vochtigheid waarde is veranderd"},"args":[{"name":"device","type":"device","filter":"driver_id=flora|ropot"}],"tokens":[{"name":"flora_measure_moisture","title":{"en":"Moisture","nl":"Vochtigheid"},"type":"number","example":32}],"id":"flora_measure_moisture_changed"},{"id":"aqara_wall_switch_double:left_press_1x","title":{"en":"Left button pressed","nl":"Linker knop ingedrukt"},"args":[{"type":"device","name":"device","filter":"driver_id=aqara_wall_switch_double"}]},{"id":"aqara_wall_switch_double:right_press_1x","title":{"en":"Right button pressed","nl":"Rechter knop ingedrukt"},"args":[{"type":"device","name":"device","filter":"driver_id=aqara_wall_switch_double"}]},{"id":"aqara_wall_switch_double:both_press_1x","title":{"en":"Both buttons pressed","nl":"Beide knoppen ingedrukt"},"args":[{"type":"device","name":"device","filter":"driver_id=aqara_wall_switch_double"}]},{"id":"aqara_wall_switch_single:press_1x","title":{"en":"Button pressed","nl":"Knop ingedrukt"},"args":[{"type":"device","name":"device","filter":"driver_id=aqara_wall_switch_single"}]}]},"drivers":[{"name":{"en":"Aqara Curtain Controller","nl":"Aqara Gordijn Controller"},"class":"curtain","capabilities":["windowcoverings_set"],"platforms":["local","cloud"],"connectivity":["zigbee"],"zigbee":{"manufacturerName":"LUMI","productId":["lumi.curtain"],"endpoints":{"1":{"clusters":[13,258]}},"learnmode":{"image":"/drivers/aqara_curtain/assets/learnmode.svg","instruction":{"en":"Press the button for 5 seconds until the light flashes.","nl":"Druk 5 seconden op de knop totdat het lampje knippert."}}},"images":{"large":"/drivers/aqara_curtain/assets/images/large.jpg","small":"/drivers/aqara_curtain/assets/images/small.jpg"},"id":"aqara_curtain"},{"id":"aqara_door_window_sensor","name":{"en":"Aqara Door & Window Sensor","nl":"Aqara Deur & Raam Sensor"},"class":"sensor","capabilities":["alarm_contact","alarm_battery"],"platforms":["local","cloud"],"connectivity":["zigbee"],"zigbee":{"manufacturerName":"LUMI","productId":"lumi.sensor_magnet.aq2","endpoints":{"1":{"clusters":[0,6]}},"learnmode":{"image":"/drivers/aqara_door_window_sensor/assets/learnmode.svg","instruction":{"en":"Press the button on the side of the Aqara Door & Window Sensor until the light flashes.","nl":"Druk op de knop aan de zijkant van de Aqara Deur & Raam Sensor totdat het lampje knippert."}}},"energy":{"batteries":["CR1632"]},"images":{"large":"/drivers/aqara_door_window_sensor/assets/images/large.png","small":"/drivers/aqara_door_window_sensor/assets/images/small.png"}},{"name":{"en":"Aqara Motion Sensor","nl":"Aqara Bewegingssensor"},"class":"sensor","capabilities":["alarm_motion","measure_luminance","alarm_battery"],"platforms":["local","cloud"],"connectivity":["zigbee"],"zigbee":{"manufacturerName":"LUMI","productId":"lumi.sensor_motion.aq2","endpoints":{"1":{"clusters":[0,1024,1030]}},"learnmode":{"image":"/drivers/aqara_motion_sensor/assets/learnmode.svg","instruction":{"en":"Press the button on the side of the Aqara Motion Sensor until the light flashes.","nl":"Druk op de knop aan de zijkant van de Aqara Bewegingssensor totdat het lampje knippert."}}},"energy":{"batteries":["CR2450"]},"images":{"large":"/drivers/aqara_motion_sensor/assets/images/large.png","small":"/drivers/aqara_motion_sensor/assets/images/small.png"},"settings":[{"id":"motion_alarm_timeout","type":"number","label":{"en":"Motion alarm timeout","nl":"Bewegingsalarm timeout"},"hint":{"en":"The motion alarm will be disabled after the motion alarm timeout has expired since the last time motion was detected.","nl":"Het bewegingsalarm wordt uitgeschakeld na het verstrijken van de tijd in deze instelling sinds de laatste bewegingsdetectie."},"value":300,"min":60,"max":86400,"units":{"en":"seconds","nl":"seconden"}}],"id":"aqara_motion_sensor"},{"name":{"en":"Aqara Wall Switch (Double)","nl":"Aqara Wandschakelaar (Dubbel)"},"class":"remote","capabilities":["alarm_battery"],"platforms":["local","cloud"],"connectivity":["zigbee"],"zigbee":{"manufacturerName":"LUMI","productId":["lumi.sensor_86sw2"],"endpoints":{"1":{"clusters":[0,6]},"2":{"clusters":[6]},"3":{"clusters":[6]}},"learnmode":{"instruction":{"en":"Press both buttons until the light flashes.","nl":"Druk op beide knoppen totdat het lampje knippert."}}},"energy":{"batteries":["CR2450"]},"images":{"large":"/drivers/aqara_wall_switch_double/assets/images/large.jpg","small":"/drivers/aqara_wall_switch_double/assets/images/small.jpg"},"id":"aqara_wall_switch_double"},{"name":{"en":"Aqara Wall Switch (Single)","nl":"Aqara Wandschakelaar (Enkel)"},"class":"remote","capabilities":["alarm_battery"],"platforms":["local","cloud"],"connectivity":["zigbee"],"zigbee":{"manufacturerName":"LUMI","productId":["lumi.sensor_86sw1"],"endpoints":{"1":{"clusters":[0,6]}},"learnmode":{"image":"/drivers/aqara_wall_switch_single/assets/learnmode.svg","instruction":{"en":"Press the button until the light flashes.","nl":"Houd de schakelaar ingedrukt totdat het lampje knippert."}}},"energy":{"batteries":["CR2032"]},"images":{"large":"/drivers/aqara_wall_switch_single/assets/images/large.png","small":"/drivers/aqara_wall_switch_single/assets/images/small.png"},"id":"aqara_wall_switch_single"},{"name":{"en":"Aqara Temperature & Humidity Sensor","nl":"Aqara Temperatuur & Vochtsensor"},"class":"sensor","capabilities":["measure_temperature","measure_pressure","measure_humidity","alarm_battery"],"platforms":["local","cloud"],"connectivity":["zigbee"],"zigbee":{"manufacturerName":"LUMI","productId":"lumi.weather","endpoints":{"1":{"clusters":[0,1026,1027,1029]}},"learnmode":{"image":"/drivers/aqara_weather_sensor/assets/learnmode.svg","instruction":{"en":"Press the button on the side of the Aqara Temperature & Humidity Sensor until the light flashes.","nl":"Druk op de knop aan de zijkant van de Aqara Temperatuur & Vochtsensor totdat het lampje knippert."}}},"energy":{"batteries":["CR2032"]},"images":{"large":"/drivers/aqara_weather_sensor/assets/images/large.png","small":"/drivers/aqara_weather_sensor/assets/images/small.png"},"settings":[],"id":"aqara_weather_sensor"},{"name":{"en":"Mi Flora Plant Sensor"},"class":"sensor","capabilities":["measure_temperature","measure_luminance","flora_measure_moisture","flora_measure_fertility"],"platforms":["local","cloud"],"connectivity":["ble"],"images":{"large":"/drivers/flora/assets/images/large.png","small":"/drivers/flora/assets/images/small.png"},"pair":[{"id":"list_devices","template":"list_devices","navigation":{"next":"add_devices"}},{"id":"add_devices","template":"add_devices"}],"id":"flora"},{"name":{"en":"Mi Flora Ropot"},"class":"sensor","capabilities":["measure_temperature","flora_measure_moisture","flora_measure_fertility"],"platforms":["local","cloud"],"connectivity":["ble"],"images":{"large":"/drivers/ropot/assets/images/large.png","small":"/drivers/ropot/assets/images/small.png"},"pair":[{"id":"list_devices","template":"list_devices","navigation":{"next":"add_devices"}},{"id":"add_devices","template":"add_devices"}],"id":"ropot"},{"id":"thermohygrometer","name":{"en":"Mi Thermometer/Hygrometer"},"class":"sensor","capabilities":["measure_humidity","measure_temperature","measure_battery"],"platforms":["local","cloud"],"connectivity":["ble"],"energy":{"batteries":["CR2032"]},"images":{"large":"/drivers/thermohygrometer/assets/images/large.png","small":"/drivers/thermohygrometer/assets/images/small.png"},"pair":[{"id":"list_devices","template":"list_devices","navigation":{"next":"add_devices"}},{"id":"add_devices","template":"add_devices"}]}],"capabilities":{"flora_measure_fertility":{"type":"number","decimals":2,"title":{"en":"Fertility","nl":"Vruchtbaarheid"},"units":{"en":"µS/cm"},"insights":true,"getable":true,"setable":false,"icon":"/assets/capabilities/flora_measure_fertility.svg"},"flora_measure_moisture":{"type":"number","decimals":2,"title":{"en":"Moisture","nl":"Vochtigheid"},"units":{"en":"%"},"insights":true,"getable":true,"setable":false,"icon":"/assets/capabilities/flora_measure_moisture.svg"}}}
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.mi",
+  "version": "0.7.0",
+  "compatibility": ">=5.0.0",
+  "brandColor": "#FF6700",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "sdk": 3,
+  "name": {
+    "en": "Xiaomi",
+    "nl": "Xiaomi"
+  },
+  "description": {
+    "en": "A Different Kind of Smart Home Solution",
+    "nl": "Een ander soort Smart Home oplossing"
+  },
+  "category": [
+    "lights"
+  ],
+  "permissions": [
+    "homey:wireless:ble",
+    "homey:wireless:zigbee"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Athom B.V."
+  },
+  "support": "https://homey.app/support",
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "The fertility value has changed",
+          "nl": "De vruchtbaarheid waarde is veranderd"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=flora|ropot"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "flora_measure_fertility",
+            "title": {
+              "en": "Fertility",
+              "nl": "Vruchtbaarheid"
+            },
+            "type": "number",
+            "example": 2.34
+          }
+        ],
+        "id": "flora_measure_fertility_changed"
+      },
+      {
+        "title": {
+          "en": "The moisture value has changed",
+          "nl": "De vochtigheid waarde is veranderd"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=flora|ropot"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "flora_measure_moisture",
+            "title": {
+              "en": "Moisture",
+              "nl": "Vochtigheid"
+            },
+            "type": "number",
+            "example": 32
+          }
+        ],
+        "id": "flora_measure_moisture_changed"
+      },
+      {
+        "id": "aqara_wall_switch_double:left_press_1x",
+        "title": {
+          "en": "Left button pressed",
+          "nl": "Linker knop ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=aqara_wall_switch_double"
+          }
+        ]
+      },
+      {
+        "id": "aqara_wall_switch_double:right_press_1x",
+        "title": {
+          "en": "Right button pressed",
+          "nl": "Rechter knop ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=aqara_wall_switch_double"
+          }
+        ]
+      },
+      {
+        "id": "aqara_wall_switch_double:both_press_1x",
+        "title": {
+          "en": "Both buttons pressed",
+          "nl": "Beide knoppen ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=aqara_wall_switch_double"
+          }
+        ]
+      },
+      {
+        "id": "aqara_wall_switch_single:press_1x",
+        "title": {
+          "en": "Button pressed",
+          "nl": "Knop ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=aqara_wall_switch_single"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Aqara Curtain Controller",
+        "nl": "Aqara Gordijn Controller"
+      },
+      "class": "curtain",
+      "capabilities": [
+        "windowcoverings_set"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": "LUMI",
+        "productId": [
+          "lumi.curtain"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              13,
+              258
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/aqara_curtain/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button for 5 seconds until the light flashes.",
+            "nl": "Druk 5 seconden op de knop totdat het lampje knippert."
+          }
+        }
+      },
+      "images": {
+        "large": "/drivers/aqara_curtain/assets/images/large.jpg",
+        "small": "/drivers/aqara_curtain/assets/images/small.jpg"
+      },
+      "id": "aqara_curtain"
+    },
+    {
+      "id": "aqara_door_window_sensor",
+      "name": {
+        "en": "Aqara Door & Window Sensor",
+        "nl": "Aqara Deur & Raam Sensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact",
+        "alarm_battery"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": "LUMI",
+        "productId": "lumi.sensor_magnet.aq2",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/aqara_door_window_sensor/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on the side of the Aqara Door & Window Sensor until the light flashes.",
+            "nl": "Druk op de knop aan de zijkant van de Aqara Deur & Raam Sensor totdat het lampje knippert."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "CR1632"
+        ]
+      },
+      "images": {
+        "large": "/drivers/aqara_door_window_sensor/assets/images/large.png",
+        "small": "/drivers/aqara_door_window_sensor/assets/images/small.png"
+      }
+    },
+    {
+      "name": {
+        "en": "Aqara Motion Sensor",
+        "nl": "Aqara Bewegingssensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_motion",
+        "measure_luminance",
+        "alarm_battery"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": "LUMI",
+        "productId": "lumi.sensor_motion.aq2",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1024,
+              1030
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/aqara_motion_sensor/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on the side of the Aqara Motion Sensor until the light flashes.",
+            "nl": "Druk op de knop aan de zijkant van de Aqara Bewegingssensor totdat het lampje knippert."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "images": {
+        "large": "/drivers/aqara_motion_sensor/assets/images/large.png",
+        "small": "/drivers/aqara_motion_sensor/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "motion_alarm_timeout",
+          "type": "number",
+          "label": {
+            "en": "Motion alarm timeout",
+            "nl": "Bewegingsalarm timeout"
+          },
+          "hint": {
+            "en": "The motion alarm will be disabled after the motion alarm timeout has expired since the last time motion was detected.",
+            "nl": "Het bewegingsalarm wordt uitgeschakeld na het verstrijken van de tijd in deze instelling sinds de laatste bewegingsdetectie."
+          },
+          "value": 300,
+          "min": 60,
+          "max": 86400,
+          "units": {
+            "en": "seconds",
+            "nl": "seconden"
+          }
+        }
+      ],
+      "id": "aqara_motion_sensor"
+    },
+    {
+      "name": {
+        "en": "Aqara Wall Switch (Double)",
+        "nl": "Aqara Wandschakelaar (Dubbel)"
+      },
+      "class": "remote",
+      "capabilities": [
+        "alarm_battery"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": "LUMI",
+        "productId": [
+          "lumi.sensor_86sw2"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6
+            ]
+          },
+          "2": {
+            "clusters": [
+              6
+            ]
+          },
+          "3": {
+            "clusters": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Press both buttons until the light flashes.",
+            "nl": "Druk op beide knoppen totdat het lampje knippert."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "images": {
+        "large": "/drivers/aqara_wall_switch_double/assets/images/large.jpg",
+        "small": "/drivers/aqara_wall_switch_double/assets/images/small.jpg"
+      },
+      "id": "aqara_wall_switch_double"
+    },
+    {
+      "name": {
+        "en": "Aqara Wall Switch (Single)",
+        "nl": "Aqara Wandschakelaar (Enkel)"
+      },
+      "class": "remote",
+      "capabilities": [
+        "alarm_battery"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": "LUMI",
+        "productId": [
+          "lumi.sensor_86sw1"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/aqara_wall_switch_single/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button until the light flashes.",
+            "nl": "Houd de schakelaar ingedrukt totdat het lampje knippert."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "images": {
+        "large": "/drivers/aqara_wall_switch_single/assets/images/large.png",
+        "small": "/drivers/aqara_wall_switch_single/assets/images/small.png"
+      },
+      "id": "aqara_wall_switch_single"
+    },
+    {
+      "name": {
+        "en": "Aqara Temperature & Humidity Sensor",
+        "nl": "Aqara Temperatuur & Vochtsensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_temperature",
+        "measure_pressure",
+        "measure_humidity",
+        "alarm_battery"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": "LUMI",
+        "productId": "lumi.weather",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1026,
+              1027,
+              1029
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/aqara_weather_sensor/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the button on the side of the Aqara Temperature & Humidity Sensor until the light flashes.",
+            "nl": "Druk op de knop aan de zijkant van de Aqara Temperatuur & Vochtsensor totdat het lampje knippert."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "images": {
+        "large": "/drivers/aqara_weather_sensor/assets/images/large.png",
+        "small": "/drivers/aqara_weather_sensor/assets/images/small.png"
+      },
+      "settings": [],
+      "id": "aqara_weather_sensor"
+    },
+    {
+      "name": {
+        "en": "Mi Flora Plant Sensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_temperature",
+        "measure_luminance",
+        "flora_measure_moisture",
+        "flora_measure_fertility"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "ble"
+      ],
+      "images": {
+        "large": "/drivers/flora/assets/images/large.png",
+        "small": "/drivers/flora/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "flora"
+    },
+    {
+      "name": {
+        "en": "Mi Flora Ropot"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_temperature",
+        "flora_measure_moisture",
+        "flora_measure_fertility"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "ble"
+      ],
+      "images": {
+        "large": "/drivers/ropot/assets/images/large.png",
+        "small": "/drivers/ropot/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "ropot"
+    },
+    {
+      "id": "thermohygrometer",
+      "name": {
+        "en": "Mi Thermometer/Hygrometer"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_humidity",
+        "measure_temperature",
+        "measure_battery"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "ble"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "images": {
+        "large": "/drivers/thermohygrometer/assets/images/large.png",
+        "small": "/drivers/thermohygrometer/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "flora_measure_fertility": {
+      "type": "number",
+      "decimals": 2,
+      "title": {
+        "en": "Fertility",
+        "nl": "Vruchtbaarheid"
+      },
+      "units": {
+        "en": "µS/cm"
+      },
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "/assets/capabilities/flora_measure_fertility.svg"
+    },
+    "flora_measure_moisture": {
+      "type": "number",
+      "decimals": 2,
+      "title": {
+        "en": "Moisture",
+        "nl": "Vochtigheid"
+      },
+      "units": {
+        "en": "%"
+      },
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "/assets/capabilities/flora_measure_moisture.svg"
+    }
+  }
+}
